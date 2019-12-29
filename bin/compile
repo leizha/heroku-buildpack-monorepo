@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 indent() {
-    sed -u 's/^/      /'
+    sed -u 's/^/       /'
 }
 
 BUILD_DIR="$1"
