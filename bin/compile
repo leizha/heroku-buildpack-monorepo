@@ -5,5 +5,5 @@ set -e
 
 BP_DIR=$(cd $(dirname $0)/..; pwd) # absolute path
 
-python $BP_DIR/compile.py "$@"
+python compile.py "$@"
 
