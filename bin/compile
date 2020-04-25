@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
 
-python compile.py "$@"
+# fail fast
+set -e
+
+BP_DIR=$(cd $(dirname $0)/..; pwd) # absolute path
+
+python $BP_DIR/compile.py "$@"
 
