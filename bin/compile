@@ -21,10 +21,10 @@ if [ ! -f "$BUILD_DIR/$PROJECT_DIR/prebuild" ]; then
 fi
 
 echo "       running prebuild"
+
 # move files to staging dir
 mkdir $BUILD_DIR/.staging
-shopt -s extglob
-mv $BUILD_DIR/!(.staging) $BUILD_DIR/.staging
+find $BUILD_DIR -maxdepth 1 -mindepth 1 -not -name .staging -exec mv '{}' $BUILD_DIR/.staging \;
 
 # run prebuild
 . "$BUILD_DIR/.staging/$PROJECT_DIR/prebuild" $BUILD_DIR/.staging $BUILD_DIR
