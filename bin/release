@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-echo "--- {}"
-exit 0
+echo "---"
+echo "{}"
